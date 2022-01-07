@@ -10,11 +10,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.decadev.newsapp.NewsActivity
-import com.decadev.newsapp.R
 import com.decadev.newsapp.adapters.NewsAdapter
 import com.decadev.newsapp.db.ArticleDataBase
 import com.decadev.newsapp.repository.NewsRepository
+import com.decadev.newsapp.util.NewsApplication
 import com.decadev.newsapp.util.NewsViewModelProviderFactory
 import com.decadev.newsapp.viewModel.NewsViewModel
 import com.google.android.material.snackbar.Snackbar
@@ -29,7 +28,7 @@ class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
         super.onViewCreated(view, savedInstanceState)
         showRecyclerView()
 
-        val viewModelProviderFactory = NewsViewModelProviderFactory(Application(),  newsRepository = NewsRepository(ArticleDataBase(requireActivity())))
+        val viewModelProviderFactory = NewsViewModelProviderFactory(activity?.application as NewsApplication,  newsRepository = NewsRepository(ArticleDataBase(requireActivity())))
 
         viewModel = ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
 

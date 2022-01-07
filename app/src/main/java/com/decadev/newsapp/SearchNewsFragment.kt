@@ -1,8 +1,6 @@
 package com.decadev.newsapp
 
-import android.app.Application
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.AbsListView
 import android.widget.Toast
@@ -13,8 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.decadev.newsapp.NewsActivity
-import com.decadev.newsapp.R
 import com.decadev.newsapp.adapters.NewsAdapter
 import com.decadev.newsapp.db.ArticleDataBase
 import com.decadev.newsapp.repository.NewsRepository

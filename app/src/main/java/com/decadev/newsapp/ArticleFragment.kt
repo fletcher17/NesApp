@@ -7,8 +7,6 @@ import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
-import com.decadev.newsapp.NewsActivity
-import com.decadev.newsapp.R
 import com.decadev.newsapp.db.ArticleDataBase
 import com.decadev.newsapp.repository.NewsRepository
 import com.decadev.newsapp.util.NewsViewModelProviderFactory

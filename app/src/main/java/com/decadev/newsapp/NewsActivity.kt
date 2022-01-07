@@ -1,6 +1,5 @@
 package com.decadev.newsapp
 
-import android.app.Application
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
